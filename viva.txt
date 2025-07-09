@@ -1,0 +1,130 @@
+McCulloch-Pitts Logic Gates
+--------------------------------------------------------------------------------
+Q: What is the role of threshold in McCulloch-Pitts model?
+A: It determines the activation of the neuron; output is 1 if weighted sum ≥ threshold, otherwise 0.
+
+Q: What type of logic gates can McCulloch-Pitts simulate?
+A: It can simulate basic binary logic gates like AND, OR, and NOT.
+
+Q: Why is this model considered binary?
+A: Because it only deals with binary input and output values (0 or 1).
+
+
+
+Hebb’s Rule
+--------------------------------------------------------------------------------
+Q: What is Hebb’s learning rule?
+A: It states that the connection between neurons is strengthened when they are activated together.
+
+Q: Does Hebb’s rule use supervised learning?
+A: No, it is an unsupervised learning rule.
+
+Q: What is the biological inspiration for Hebb’s rule?
+A: The principle 'neurons that fire together wire together' observed in neurobiology.
+
+
+
+Kohonen Self Organizing Map
+--------------------------------------------------------------------------------
+Q: What kind of learning is SOM based on?
+A: Unsupervised learning.
+
+Q: What is a Best Matching Unit (BMU)?
+A: It is the neuron whose weight vector is most similar to the input vector.
+
+Q: Why is SOM useful in data visualization?
+A: It reduces high-dimensional data into low-dimensional (usually 2D) maps for easy visualization.
+
+
+
+Hamming Network
+--------------------------------------------------------------------------------
+Q: What is Hamming distance?
+A: It is the number of positions at which corresponding bits are different.
+
+Q: What is the significance of minimum distance in this method?
+A: The input is classified to the exemplar with the smallest Hamming distance.
+
+Q: Can Hamming distance be used for non-binary inputs?
+A: No, it is typically used for binary vectors.
+
+
+
+BAM Network
+--------------------------------------------------------------------------------
+Q: What makes BAM bidirectional?
+A: It can recall input from output and vice versa.
+
+Q: What is the significance of Hebbian rule in BAM?
+A: It is used to form associations between input and output patterns.
+
+Q: How is stability ensured in BAM?
+A: Through convergence via recurrent dynamics and symmetrical weight matrices.
+
+
+
+MaxNet
+--------------------------------------------------------------------------------
+Q: What is lateral inhibition?
+A: A mechanism where neurons suppress the activity of their neighbors to enhance contrast.
+
+Q: Why does MaxNet converge to one winning neuron?
+A: Because all neurons except the one with maximum activation are gradually suppressed.
+
+Q: Is MaxNet a feedforward or recurrent network?
+A: It is a recurrent network.
+
+
+
+De Morgan’s Law
+--------------------------------------------------------------------------------
+Q: State De Morgan's laws.
+A: ~(A ∨ B) = ~A ∧ ~B and ~(A ∧ B) = ~A ∨ ~B.
+
+Q: Why are these laws important in Boolean algebra?
+A: They help in simplifying expressions and proving equivalences.
+
+Q: Can you use these laws for logic simplification?
+A: Yes, they are commonly used in logic circuit design and simplification.
+
+
+
+Fuzzy Set Operations
+--------------------------------------------------------------------------------
+Q: How is fuzzy union different from crisp union?
+A: Fuzzy union uses max(A(x), B(x)) instead of set union.
+
+Q: What does complement of a fuzzy set represent?
+A: It shows the degree to which an element does not belong to the set.
+
+Q: What is a membership function?
+A: It defines how each element maps to a degree of membership in the fuzzy set.
+
+
+
+Fuzzy Cartesian Product
+--------------------------------------------------------------------------------
+Q: What is a fuzzy relation?
+A: A fuzzy set defined on the Cartesian product of two universes.
+
+Q: How is fuzzy Cartesian product computed?
+A: By taking min(A(x), B(y)) for each pair (x, y).
+
+Q: How are fuzzy relations visualized?
+A: Using tables, matrices, or heatmaps.
+
+
+
+Max–Min Composition of Fuzzy Relations
+--------------------------------------------------------------------------------
+Q: What does max–min composition represent?
+A: It models how fuzzy relations combine to infer indirect relations.
+
+Q: How is it different from Cartesian product?
+A: Cartesian product uses direct pairs, while max–min composition involves intermediate variables.
+
+Q: What are applications of fuzzy composition?
+A: Decision-making, fuzzy inference systems, and control systems.
+
+
+

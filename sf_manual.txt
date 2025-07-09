@@ -1,0 +1,156 @@
+PROGRAM 1
+Title: McCulloch-Pitts Logic Gates
+Aim: To implement logical gates (AND, OR, NOT) using the McCulloch-Pitts neuron model.
+Concept:
+The McCulloch-Pitts model is one of the earliest neural network models. It is a threshold-based neuron model that uses binary input and output values. The neuron calculates the weighted sum of its inputs and compares it against a threshold value to produce an output.
+It can simulate logic gates such as AND, OR, and NOT by adjusting weights and threshold values appropriately.
+Steps:
+- Define binary inputs (0 or 1).
+- Set weights and threshold values based on the desired gate logic.
+- Use the step activation function: if (sum of weights * inputs) ≥ threshold, output is 1; else 0.
+- Repeat for all input combinations for each gate (AND, OR, NOT).
+- Display the output truth table.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 2
+Title: Hebb’s Rule
+Aim: To implement Hebbian learning rule to update weights based on input-output pairs.
+Concept:
+Hebbian learning is a neural learning rule based on the principle that the strength of a connection between two neurons increases if they are activated simultaneously. It is unsupervised and relies on the correlation between input and output signals.
+The weight update formula is: Δw = η * x * y where x is the input, y is the output, and η is the learning rate (often taken as 1).
+Steps:
+- Initialize weights and bias to zero.
+- Input training patterns with desired outputs.
+- For each pattern, update weights using Hebb’s rule.
+- Accumulate weight updates across all training patterns.
+- Display the final weights and bias.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 3
+Title: Kohonen Self Organizing Map
+Aim: To implement a Kohonen Self Organizing Map (SOM) for unsupervised classification.
+Concept:
+SOM is a type of unsupervised neural network used to map high-dimensional data into lower-dimensional (typically 2D) space. It preserves the topological properties of the input space.
+Each neuron in the grid has a weight vector. For a given input, the neuron whose weight vector is closest is chosen as the BMU (Best Matching Unit). The BMU and its neighbors are updated to resemble the input.
+Steps:
+- Initialize the weights of all neurons randomly.
+- For each training input vector, compute the distance to all weight vectors.
+- Identify the BMU (neuron with minimum distance).
+- Update the weights of BMU and its neighbors using a learning rate and neighborhood function.
+- Repeat for multiple epochs and visualize the resulting map.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 4
+Title: Hamming Network
+Aim: To implement a Hamming Network to recognize patterns using Hamming distance.
+Concept:
+A Hamming network is used for pattern recognition, especially for binary patterns. It works by computing the Hamming distance between the input and a set of stored exemplar vectors. The closest match is chosen.
+The Hamming distance is simply the count of differing bits between two binary vectors of equal length.
+Steps:
+- Define the set of exemplar vectors (stored patterns).
+- Take input pattern from the user or predefined.
+- For each exemplar, compute the Hamming distance with the input.
+- Select the exemplar with the minimum distance as the match.
+- Display the result.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 5
+Title: BAM Network
+Aim: To implement a Bidirectional Associative Memory (BAM) network.
+Concept:
+BAM is a recurrent neural network model used for associative memory. It stores patterns as associations between two layers.
+Using Hebbian learning, the weight matrix is computed as the outer product of input-output pattern pairs. Recall can be done in both directions (i.e., from input to output or vice versa).
+Steps:
+- Define input and output pattern pairs.
+- Compute the weight matrix using Hebb's rule: W = XᵀY.
+- To recall from A to B, use B = sign(A × W).
+- To recall from B to A, use A = sign(B × Wᵀ).
+- Verify associative recall in both directions.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 6
+Title: MaxNet
+Aim: To implement MaxNet to identify the neuron with the highest activation using lateral inhibition.
+Concept:
+MaxNet is a competitive network that uses lateral inhibition to allow only the neuron with the highest initial input to remain active. All other neurons are gradually suppressed.
+Each neuron inhibits all other neurons proportionally to their strength. Iterations continue until only one remains active.
+Steps:
+- Initialize input activations for each neuron.
+- Choose an inhibition factor (epsilon).
+- In each iteration, subtract epsilon times the sum of all other activations from each neuron’s activation.
+- Clamp negative values to 0.
+- Repeat until only one neuron has non-zero output.
+- Display the winner neuron.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 7
+Title: De Morgan’s Law
+Aim: To verify De Morgan’s Laws using boolean operations.
+Concept:
+De Morgan's Laws provide a way to simplify expressions involving NOT, AND, and OR.
+They state:
+1. ~(A ∨ B) = ~A ∧ ~B
+2. ~(A ∧ B) = ~A ∨ ~B
+This is useful in logic design and proof transformations.
+Steps:
+- Take boolean values A and B.
+- Compute both sides of De Morgan’s laws.
+- Compare the results for various values of A and B (0 or 1).
+- Print truth tables for both expressions.
+- Verify if the results match.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 8
+Title: Fuzzy Set Operations
+Aim: To implement union, intersection, complement, and difference operations on fuzzy sets.
+Concept:
+Fuzzy sets allow partial membership, unlike classical sets. Common operations include:
+- Union: max(A(x), B(x))
+- Intersection: min(A(x), B(x))
+- Complement: 1 - A(x)
+- Difference: min(A(x), 1 - B(x))
+Steps:
+- Define fuzzy sets A and B using dictionaries.
+- Loop through all elements and apply max, min, and complement formulas.
+- Store and print the result of each operation.
+- Visualize results if necessary.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 9
+Title: Fuzzy Cartesian Product
+Aim: To create a fuzzy relation by Cartesian product of two fuzzy sets.
+Concept:
+Fuzzy relation between two sets A and B can be created using the Cartesian product.
+Each pair (a, b) is assigned a membership value = min(A(a), B(b)). This represents the degree to which the elements are related.
+Steps:
+- Define fuzzy sets A and B.
+- Iterate over all pairs of elements from A and B.
+- Calculate the minimum of A(a) and B(b) for each pair.
+- Store the relation as a dictionary or matrix.
+- Print all pairwise membership values.
+
+--------------------------------------------------------------------------------
+
+PROGRAM 10
+Title: Max–Min Composition of Fuzzy Relations
+Aim: To perform max–min composition on two fuzzy relations.
+Concept:
+Max-min composition is a technique in fuzzy logic to combine two fuzzy relations. Given R: A→B and S: B→C, the composition T: A→C is computed by taking the max of min values over all intermediate elements from B.
+Mathematically: T(a, c) = max_y(min(R(a, y), S(y, c)))
+Steps:
+- Define fuzzy sets A, B, and C.
+- Create fuzzy relations R (A×B) and S (B×C) using min(A, B) and min(B, C) respectively.
+- For each (a, c), compute min(R(a, b), S(b, c)) for all b in B.
+- Take max of all min values and store it as T(a, c).
+- Display the composed relation.
+
+--------------------------------------------------------------------------------
+
